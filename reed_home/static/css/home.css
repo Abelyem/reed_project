@@ -1,0 +1,86 @@
+
+
+#brand-name {
+    font-size: 2rem;
+    font-weight:700;
+}
+
+.navbar-brand {
+    color: rgb(78, 0, 78)!important;
+}
+
+.navbar-brand > span {
+    color: orangered;
+}
+
+.nav-option {
+    color: rgb(58, 53, 53)!important;
+    font-size: 18px;
+    padding-bottom: 0!important;
+}
+
+.nav-option:hover {
+    border-bottom: 2px solid orangered;
+    border-bottom-left-radius: 7%;
+    border-bottom-right-radius: 7%;
+}
+
+
+.jumbotron-fluid {
+    background-image: url("https://images.unsplash.com/photo-1529400971008-f566de0e6dfc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    padding: 0;
+}
+
+.jumbotron-home-header {
+    height: 25rem;
+    width: inherit;
+    background-color: rgba(134, 43, 134, 0.6);
+}
+
+.jumbotron-header-text-container {
+    height: fit-content;
+    padding: 2rem 0; /* --- add media queries to amend this in different viewports (mobile/tablet etc) */
+}
+
+.jumbotron-header-text {
+    font-weight: 600;
+    padding-top: 1rem;
+}
+
+.jumbotron-header-text > span {
+    color: orangered;
+}
+
+.job-search-button {
+    border-color: #fff;
+    font-weight: 600;
+    padding: auto 1rem;
+}
+
+.job-search-button:hover {
+    border: 1px solid black;
+}
+
+.search-disclaimer {
+    font-weight: 600;
+    padding-top: 1rem;
+}
+
+.fa-search,
+.fa-map-marker-alt {
+    color: black;
+}
+
+
+.card-content-container {
+    max-width: 40%;
+    border: 1px solid rgb(138, 134, 134);
+}
+
+.card-subtitle {
+    display: inline;
+}

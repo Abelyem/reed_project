@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+{% for i in response.results %}
+
+<div class="card container ml-5 my-4" style="width: 40vw;">
+
+  <div class="card-body">
+    <h5 class="card-title">{{ i.jobTitle }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted"><i class="fas fa-angle-double-right"></i> {{ i.employerName }}</h6> |
+    <h6 class="card-subtitle mb-2 text-muted">{{ i.locationName }}</h6>
+
+    <p class="card-text">{{  i.jobDescription }}</p>
+    <a href="{{ i.jobUrl }}" target="_blank" class="card-link">Reed Job URL</a>
+  </div>
+</div>
+{% endfor %} 
+
+
+{% endblock %}
+

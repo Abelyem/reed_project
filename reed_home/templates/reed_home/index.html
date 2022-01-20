@@ -1,0 +1,94 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<div class="jumbotron-fluid">
+  <div class="jumbotron-home-header">
+    <div class="jumbotron-header-text-container d-flex justify-content-center">
+      <h1 class="display-4 jumbotron-header-text text-center text-white pt-4">
+        Find your first role with <span>us.</span>
+      </h1>
+    </div>
+
+    <div>
+      <form
+        class="form-inline my-2 my-lg-0 d-flex justify-content-center"
+        method="GET"
+      >
+        <div class="input-icon-container m-0 p-0">
+          <i class="fas fa-search"></i>
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            name="name"
+            placeholder="Search"
+            aria-label="Search"
+          />
+        </div>
+        <div class="input-icon-container m-0 p-0">
+          <i class="fas fa-map-marker-alt"></i>
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            name="locationName"
+            placeholder="Location"
+            aria-label="Search"
+          />
+        </div>
+
+        <button
+          class="btn my-2 my-sm-0 text-white job-search-button"
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
+      <div class="d-flex justify-content-center text-white">
+        <small class="search-disclaimer"
+          >*Search for a programming language, and the results shown will be for
+          Junior roles only.</small
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="card-body row justify-content-center">
+    {% for i in response.results %}
+
+    <div class="col-12 col-md-6 card-content-container m-2 p-3">
+      <h5 class="card-title">{{ i.jobTitle }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted"><i class="fas fa-angle-double-right"></i> {{ i.employerName }}</h6> |
+      <h6 class="card-subtitle mb-2 text-muted">{{ i.locationName }}</h6>
+
+      <p class="card-text">{{  i.jobDescription }}</p>
+      <a href="{{ i.jobUrl }}" target="_blank" class="card-link">Reed Job URL</a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+ {% endblock %}
+
+
+  <!-- <div class="card container ml-5 my-4" style="width: 80%;">
+      <div class="card-body row">
+        <div class="col-sm-12 col-lg-2">
+          <h5 class="card-title">{{ i.jobTitle }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ i.employerName }}</h6> |
+          <h6 class="card-subtitle mb-2 text-muted">{{ i.locationName }}</h6>
+
+          <p class="card-text">{{  i.jobDescription }}</p>
+          <a href="{{ i.jobUrl }}" target="_blank" class="card-link">Reed Job URL</a>
+        </div>
+        
+        <div class="col-sm-12 col-lg-6">
+          <h5 class="card-title">{{ i.jobTitle }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ i.employerName }}</h6> |
+          <h6 class="card-subtitle mb-2 text-muted">{{ i.locationName }}</h6>
+
+          <p class="card-text">{{  i.jobDescription }}</p>
+          <a href="{{ i.jobUrl }}" target="_blank" class="card-link">Reed Job URL</a>
+        </div>
+
+      </div>
+    </div> -->
