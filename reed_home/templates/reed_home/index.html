@@ -7,12 +7,14 @@
       </h1>
     </div>
 
-    <div>
+    <!-- Input section (searchbox for language and location)-->
+
+    <div class="searchbox_container">
       <form
         class="form-inline my-2 my-lg-0 d-flex justify-content-center"
         method="GET"
       >
-        <div class="input-icon-container m-0 p-0">
+        <div class="input-icon-container m-0">
           <i class="fas fa-search"></i>
           <input
             class="form-control mr-sm-2"
@@ -22,7 +24,7 @@
             aria-label="Search"
           />
         </div>
-        <div class="input-icon-container m-0 p-0">
+        <div class="input-icon-container m-0">
           <i class="fas fa-map-marker-alt"></i>
           <input
             class="form-control mr-sm-2"
@@ -50,27 +52,30 @@
   </div>
 </div>
 
-
 <div class="container-fluid">
   <div class="card-body row justify-content-center">
     {% for i in response.results %}
 
     <div class="col-12 col-md-6 card-content-container m-2 p-3">
-      <h5 class="card-title">{{ i.jobTitle }}</h5>
-      <h6 class="card-subtitle mb-2 text-muted"><i class="fas fa-angle-double-right"></i> {{ i.employerName }}</h6> |
+      <h5 href="{{ i.jobUrl }}" class="card-title">{{ i.jobTitle }}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">
+        <i class="fas fa-angle-double-right"></i> {{ i.employerName }}
+      </h6>
+      |
       <h6 class="card-subtitle mb-2 text-muted">{{ i.locationName }}</h6>
 
-      <p class="card-text">{{  i.jobDescription }}</p>
-      <a href="{{ i.jobUrl }}" target="_blank" class="card-link">Reed Job URL</a>
+      <p class="card-text">{{ i.jobDescription }}</p>
+      <a href="{{ i.jobUrl }}" target="_blank" class="card-link"
+        >Reed Job URL</a
+      >
     </div>
     {% endfor %}
   </div>
 </div>
 
- {% endblock %}
+{% endblock %}
 
-
-  <!-- <div class="card container ml-5 my-4" style="width: 80%;">
+<!-- <div class="card container ml-5 my-4" style="width: 80%;">
       <div class="card-body row">
         <div class="col-sm-12 col-lg-2">
           <h5 class="card-title">{{ i.jobTitle }}</h5>
