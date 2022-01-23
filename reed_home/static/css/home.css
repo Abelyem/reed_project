@@ -1,5 +1,4 @@
 
-
 #brand-name {
     font-size: 2rem;
     font-weight:700;
@@ -84,3 +83,41 @@
 .card-subtitle {
     display: inline;
 }
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) { 
+    .form-inline {
+        display: table-caption!important;
+        text-align: -webkit-center;
+    }
+
+    .form-inline > div {
+        padding-top: 3px;
+    }
+
+    .searchbox_container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .fa-map-marker-alt, .fa-search, .search-disclaimer {
+        display:none!important;
+    }
+ }
+
+
+
+/*  Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) { 
+
+    /* --- Removing horizontal scroll on smaller devices */
+    body {
+    overflow-x: hidden !important;
+    }
+
+    .container, .container-fluid {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    }
+
+ }
