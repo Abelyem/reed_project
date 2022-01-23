@@ -111,7 +111,19 @@
     .fa-map-marker-alt, .fa-search, .search-disclaimer {
         display:none!important;
     }
+
+    .card-content-container {
+        max-width: 95%;
+    }
  }
+
+ /* Medium devices (tablets, 768px and up to max-width 991px) */
+ @media (min-width: 768px) and (max-width: 991.98px) { 
+    .card-content-container {
+        min-width: 85%;
+    }
+  }
+
 
 
 
@@ -123,9 +135,9 @@
     overflow-x: hidden !important;
     }
 
-    .container, .container-fluid {
+    /* .container, .container-fluid {
     max-width: 100% !important;
     overflow-x: hidden !important;
-    }
+    } */
 
  }
