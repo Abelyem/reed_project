@@ -84,6 +84,14 @@
     display: inline;
 }
 
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+    .jumbotron-home-header {
+        height: 28rem;
+    }
+ }
+
+
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) { 
     .form-inline {
