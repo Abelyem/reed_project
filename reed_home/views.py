@@ -4,13 +4,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-print("===================")
-
-print(os.getenv("API_KEY"))
-print("YELLO")
-print("===================")
-
-
 
 def home(request):
      API_KEY = os.getenv("API_KEY")
