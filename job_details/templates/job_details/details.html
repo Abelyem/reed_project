@@ -6,16 +6,18 @@
 
 {% for i in response.results %}
 
-<div class="card container ml-5 my-4 card-content-container">
-
+<div class="card container-fluid my-3 card-content-container">
+<div class="row justify-content-center">
   <div class="card-body">
     <h5 class="card-title">{{ i.jobTitle }}</h5>
     <h6 class="card-subtitle mb-2 text-muted"><i class="fas fa-angle-double-right"></i> {{ i.employerName }}</h6> |
     <h6 class="card-subtitle mb-2 text-muted">{{ i.locationName }}</h6>
 
-    <p class="card-text">{{  i.jobDescription }}</p>
+    <p class="card-text pt-2">{{  i.jobDescription }}</p>
     <a href="{{ i.jobUrl }}" target="_blank" class="card-link">Reed Job URL</a>
   </div>
+</div>
+
 </div>
 {% endfor %} 
 
