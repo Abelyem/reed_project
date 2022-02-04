@@ -17,8 +17,17 @@
     <a href="{{ i.jobUrl }}" target="_blank" class="card-link">Reed Job URL</a>
   </div>
 </div>
-
 </div>
+
+{% empty %}
+ 
+<div class="ml-4">
+  <h4>No searches found - back to
+    <a class="back-to-home" href="{% url 'home' %}">home</a>
+  </h4>
+  
+</div>
+
 {% endfor %} 
 
 
