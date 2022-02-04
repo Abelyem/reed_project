@@ -4,8 +4,14 @@
     font-weight:700;
 }
 
-.navbar-brand {
+.navbar-brand,
+.back-to-home /* on details.html */ {
     color: rgb(78, 0, 78)!important;
+}
+
+.back-to-home:hover {
+    color: orangered!important;
+    text-decoration: none;
 }
 
 .navbar-brand > span {
